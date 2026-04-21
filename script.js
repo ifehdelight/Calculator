@@ -16,7 +16,7 @@ function updateDisplay() {
     display.style.fontSize = '35px'
   }
 }
-// Handle all button clicks
+
 buttons.forEach(button => {
   button.addEventListener('click', () => {
     const value = button.textContent;
@@ -29,9 +29,9 @@ buttons.forEach(button => {
     } 
     else if (value === '=') {
       try {
-        // Replace × ÷ with * / for eval
+        
         let expression = currentInput.replace(/×/g, '*').replace(/÷/g, '/');
-        // Prevent 0.1+0.2 = 0.30000000004
+      
         currentInput = String(parseFloat(eval(expression).toFixed(8)));
         shouldResetDisplay = true;
       } catch {
@@ -55,4 +55,4 @@ buttons.forEach(button => {
   });
 });
 
-updateDisplay(); // Show initial 0
+updateDisplay(); 
