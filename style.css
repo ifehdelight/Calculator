@@ -23,12 +23,12 @@ body {
 
 .screen-display {
   flex: 1;
-  position: relative; /* FIX */
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
   padding-bottom: 20px;
+  position: relative; /* ← ADD THIS */
 }
 
 .display {
@@ -62,24 +62,15 @@ body {
   outline: none;
   font-size: 18px;
   font-weight: 500;
-  background-color: #2D3236; /* Better color */
+  background-color: dimgray;
   color: white;
-  cursor: pointer; /* Add */
-  user-select: none; /* Add */
-  -webkit-tap-highlight-color: transparent; /* Add */
+  cursor: pointer; /* ← ADD THIS */
 }
 
-.button:active { /* Add this for feedback */
+.button:active { /* ← ADD THIS */
   opacity: 0.7;
-  transform: scale(0.95);
 }
 
 .button.operator {
-  background-color: #3D4145; /* Different from numbers */
-  color: #FF9F1C;
-}
-
-.button:last-child {
-  background-color: #FF9F1C; /* Equal button */
-  color: white;
+  color: darkorange;
 }
